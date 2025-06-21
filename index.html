@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    });
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Shaun Lewis – Backend Engineer and Distributed Systems Enthusiast. Portfolio, projects, and blog." />
@@ -74,13 +84,13 @@
 </head>
 <body>
 
-  <header>
+  <header data-aos="zoom-in">
     <img src="shaun-pic.jpg" alt="Shaun Lewis" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-bottom: 1rem;">
     <h1>Shaun Lewis</h1>
     <p>Backend Engineer | Distributed Systems Enthusiast | ML Integrator</p>
   </header>
 
-  <section>
+  <section data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I'm building high-throughput backend systems in C++, Golang, and Java. I love exploring how backend and ML come together, especially in real-time infrastructure and intelligent services.
@@ -90,75 +100,79 @@
     </p>
   </section>
 
-  <section>
-    <h2>Tech Stack</h2>
-    <div class="badges">
-      <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-      <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"/>
-    </div>
-  </section>
+  
 
-  <section>
-    <h2>Proud Projects</h2>
+  
 
-    <div class="project">
-      <h3><a href="https://github.com/ferrero-rocher/FastHash" target="_blank">FastHash</a></h3>
-      <p>A Redis-inspired key-value store built in modern C++ with TCP sockets, key expiry, file persistence, and thread-safe operations.<br><strong>Tech Stack:</strong> C++, Winsock2, std::unordered_map, RAII</p>
-    </div>
+  
 
-    <div class="project">
-      <h3><a href="https://github.com/ferrero-rocher/gpu-speedup-comparison" target="_blank">GPU Speedup Comparison</a></h3>
-      <p>Empirical comparison between CPU and GPU workloads using OpenMP and CUDA for parallel computing tasks.<br><strong>Tech Stack:</strong> C++, OpenMP, CUDA, Python</p>
-    </div>
+  
 
-    <div class="project">
-      <h3><a href="https://github.com/ferrero-rocher/twitter-backend-microservices" target="_blank">Twitter Backend Microservices</a></h3>
-      <p>A Spring Boot microservice clone with user auth, post APIs, and API gateway routing.<br><strong>Tech Stack:</strong> Java, Spring Boot, REST, Docker, MySQL</p>
-    </div>
+  
 
-    <div class="project">
-      <h3><a href="https://github.com/ferrero-rocher/event-connect" target="_blank">EventConnect</a></h3>
-      <p>A Flutter web app for event discovery and sharing, with real-time updates, photos, and map integration.<br><strong>Tech Stack:</strong> Flutter, Dart, Firebase, Firestore</p>
-    </div>
+  
 
-    <div class="project">
-      <h3><a href="https://github.com/FitForge-Tailored-Fitness-Mastery/fitforge-1-16" target="_blank">FitForge</a></h3>
-      <p>Fitness tracker with personalized workouts and metrics, built using the MERN stack.<br><strong>Tech Stack:</strong> MongoDB, Express, React, Node.js, Tailwind CSS</p>
-    </div>
+  <section data-aos="fade-up">
+  <h2>Skills</h2>
+  <ul>
+    <li>C++ (Multithreading, Memory Management, TCP Sockets, RAII, STL, Concurrency)</li>
+    <li>Java & Spring Boot (Microservices, RESTful APIs, Kafka, Service Discovery, Load Balancing)</li>
+    <li>Golang (GRPC, Distributed Caching, Worker Pools)</li>
+    <li>Python (Machine Learning Prototyping, NumPy, Scikit-learn, Pandas)</li>
+    <li>ML Ops (Model Serving, Feature Pipelines, Lightweight Model Hosting)</li>
+    <li>Docker, Kubernetes, Redis, PostgreSQL, MySQL, Prometheus, Grafana</li>
+    <li>Message Queues: Kafka, RabbitMQ</li>
+    <li>CI/CD: GitHub Actions, Docker Compose</li>
+    <li>Frontend: Flutter + Firebase (for EventConnect)</li>
+  </ul>
+</section>
 
-    <div class="project">
-      <h3><a href="https://github.com/ferrero-rocher/reverse-web-proxy" target="_blank">Reverse Web Proxy</a></h3>
-      <p>A lightweight C++ reverse proxy server for HTTP traffic routing.<br><strong>Tech Stack:</strong> C++, TCP Sockets, Threading</p>
-    </div>
+<section data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3><a href="https://github.com/ferrero-rocher/FastHash" target="_blank">FastHash</a></h3>
+    <p>A Redis-inspired C++ key-value store with multithreading, TCP sockets, TTL support, atomic file persistence, and logging.<br><strong>Stack:</strong> C++, Winsock2, RAII</p>
+  </div>
+  <div class="project">
+    <h3><a href="https://github.com/ferrero-rocher/gpu-speedup-comparison" target="_blank">GPU Speedup Comparison</a></h3>
+    <p>Benchmarks CPU vs GPU performance using OpenMP and CUDA for parallel computing.<br><strong>Stack:</strong> C++, CUDA, OpenMP, Python</p>
+  </div>
+  <div class="project">
+    <h3><a href="https://github.com/ferrero-rocher/twitter-backend-microservices" target="_blank">Twitter Backend Microservices</a></h3>
+    <p>Microservice clone with API Gateway, Post/Auth Services, and DB routing.<br><strong>Stack:</strong> Java, Spring Boot, Docker, MySQL</p>
+  </div>
+  <div class="project">
+    <h3><a href="https://github.com/ferrero-rocher/event-connect" target="_blank">EventConnect</a></h3>
+    <p>Flutter web app for event discovery and sharing with real-time updates, photo uploads, and maps.<br><strong>Stack:</strong> Flutter, Firebase, Google Maps API</p>
+  </div>
+</section>
 
-    <p><strong>More repos:</strong> <a href="https://github.com/ferrero-rocher" target="_blank">github.com/ferrero-rocher</a></p>
-  </section>
+<section data-aos="fade-up">
+  <h2>Blog Highlights</h2>
+  <ul>
+    <li><a href="https://shaunlewis.hashnode.dev/distributed-file-systems-explained-is-hdfs-or-glusterfs-right-for-you" target="_blank">Distributed File Systems: HDFS vs GlusterFS</a></li>
+    <li><a href="https://shaunlewis.hashnode.dev/exploring-microservices-and-key-components-in-a-spring-boot-based-twitter-implementation" target="_blank">Spring Boot Twitter Microservices</a></li>
+    <li><a href="https://shaunlewis.hashnode.dev/java-collections-framework" target="_blank">Java Collections Framework</a></li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Blog Highlights</h2>
-    <ul>
-      <li><a href="https://shaunlewis.hashnode.dev/distributed-file-systems-explained-is-hdfs-or-glusterfs-right-for-you" target="_blank">Distributed File Systems: HDFS vs GlusterFS</a></li>
-      <li><a href="https://shaunlewis.hashnode.dev/exploring-microservices-and-key-components-in-a-spring-boot-based-twitter-implementation" target="_blank">Exploring Microservices in Spring Boot Twitter Clone</a></li>
-      <li><a href="https://shaunlewis.hashnode.dev/java-collections-framework" target="_blank">Java Collections Framework</a></li>
-    </ul>
-  </section>
+<section data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mnqezegj" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+    <input type="text" name="name" placeholder="Your Name" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid #ccc;">
+    <input type="email" name="email" placeholder="Your Email" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid #ccc;">
+    <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+    <button type="submit" style="background: var(--accent); color: white; border: none; padding: 0.8rem; border-radius: 6px; cursor: pointer;">Send Message</button>
+  </form>
+</section>
 
-  <section>
-    <h2>Let's Connect</h2>
-    <p>
-      🔗 <a href="https://www.linkedin.com/in/shaun-lewis" target="_blank">LinkedIn</a><br>
-      ✍️ <a href="https://shaunlewis.hashnode.dev" target="_blank">Hashnode Blog</a><br>
-      💻 <a href="https://github.com/ferrero-rocher" target="_blank">GitHub Profile</a>
-    </p>
-  </section>
+<section data-aos="fade-up">
+  <h2>Download Resume</h2>
+  <p>You can grab a copy of my resume here:</p>
+  <a href="resume.pdf" download style="display: inline-block; background: var(--accent); color: white; padding: 0.7rem 1.2rem; border-radius: 6px; text-decoration: none;">Download Resume</a>
+</section>
 
-  <footer>
+<footer>
     <p>&copy; 2025 Shaun Lewis — Built with clean code and caffeinated keystrokes ☕</p>
   </footer>
 
