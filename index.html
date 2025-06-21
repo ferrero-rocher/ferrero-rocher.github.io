@@ -3,15 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaun Lewis | Backend Engineer</title>
-  <style>
+  <meta name="description" content="Shaun Lewis – Backend Engineer and Distributed Systems Enthusiast. Portfolio, projects, and blog." />
+  <meta name="keywords" content="Shaun Lewis, backend, distributed systems, portfolio, Flutter, C++, Java, ML" />
+  <meta name="author" content="Shaun Lewis" />
+    <style>
+    :root {
+      --bg: #f9f9f9;
+      --fg: #333;
+      --accent: #0077cc;
+      --section-bg: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --fg: #eee;
+        --accent: #4dabf7;
+        --section-bg: #1e1e1e;
+      }
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: var(--fg);
+      transition: background 0.3s, color 0.3s;
     }
     header {
       background: #2b2d42;
@@ -21,8 +38,11 @@
     }
     section {
       max-width: 850px;
+      background: var(--section-bg);
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     h2 {
       border-bottom: 2px solid #eee;
@@ -39,8 +59,9 @@
       background: #2b2d42;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       margin-top: 3rem;
+      border-top: 4px solid var(--accent);
     }
     a {
       color: #0077cc;
